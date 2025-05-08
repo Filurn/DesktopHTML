@@ -1,0 +1,1004 @@
+<html>
+<head>
+<title>Desktop ~ HTML Styleee</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="author" content="Lau Cheng En">
+<meta name="date" content="06 May 2019">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<style>
+
+body {
+background: url('/C:/Windows/Web/Wallpaper/Windows/img0.jpg');
+background-repeat:no-repeat;
+background-size:100% 100vh;
+font-family: "Segoe UI" , Arial , sans-serif;
+}
+
+#recAdded, #startApps {
+
+}
+
+.icon {
+height: 24px;
+width: 24px;
+position: absolute;
+//background-color: blue;
+//bottom: 9.5px;
+//left: 11.5px;
+top: 50%;
+margin-top: -12px;
+left: 50%;
+margin-left: -12px;
+}
+
+#taskbar {
+//border: 1px solid black;
+width: 100%;
+height: 44px;
+bottom: 0px;
+position: absolute;
+z-index: 1;
+background: rgba(0,0,0,0.75);
+}
+
+.taskbarItem {
+//display: inline-block;
+float: left;
+position: relative;
+width: 48px;
+height: 100%;
+margin-right: 2px;
+//background: rgba(0,0,0,0.75)
+bottom: 0px;
+}
+
+.taskbarItem:hover {
+background: rgba(41,143,204,0.55);
+}
+.taskbarItem:not(:hover) {
+transition: 0.1s;
+}
+
+.menu {
+//border: 1px solid black;
+position: absolute;
+bottom: 44px;
+height: 0px;
+width: 46.5%;
+background: rgba(31,31,31,0.85);
+overflow: hidden;
+//z-index: 0.9;
+transition: 0.07s;
+left: 0px;
+opacity: 0;
+}
+
+.content {
+color: white;
+//overflow: hidden;
+//z-index:1;
+//transition: 0.2s;
+}
+
+.headerMenuRight {
+width: 100%;
+padding-top: 5px;
+//border: 1px solid white;
+margin-top: 10px;
+margin-right: 10px;
+font-size: 11.5px;
+cursor: default;
+margin-bottom: 5px;
+}
+.headerMenuLeft {
+width: 100%;
+padding-top: 5px;
+//border: 1px solid white;
+margin-top: 10px;
+margin-right: 10px;
+font-size: 11.5px;
+cursor: default;
+margin-bottom: 5px;
+}
+
+.squareCard {
+height: 98px;
+width: 98px;
+float: left;
+margin-top: 3px;
+position:relative;
+border:2px solid transparent;
+}
+
+.squareCard:hover {
+border: 2px solid rgba(255,255,255,0.5);
+}
+
+.cardIcon {
+position:absolute;
+width:36px;
+height:36px;
+//margin-top: 21px;
+//margin-left: 26px;
+left: 50%;
+margin-left: -18px;
+top: 50%;
+margin-top: -20px;
+}
+
+.menuText {
+font-size: 11px;
+position:absolute;
+bottom:0px;
+margin-bottom:2px;
+margin-left:6px;
+cursor: default;
+}
+
+#scrollBox {
+overflow: hidden;
+//float:right;
+position: absolute;
+//width: 98%;
+width: 264px;
+top: 8px;
+bottom: 0px;
+//overflow-y: scroll;
+}
+#scrollBox:hover {
+overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+width: 2px;
+}
+::-webkit-scrollbar-track {
+background: black; 
+}
+::-webkit-scrollbar-thumb {
+background: rgba(161, 163, 165, 1); 
+}
+::-webkit-scrollbar-thumb:hover {
+background: rgba(127, 131, 134, 1); 
+}
+
+.listItem {
+z-index: 1;
+cursor: default;
+height: 35.5px;
+font-size: 11.5px;
+position: relative;
+width: 255px;
+padding: 2px;
+}
+.listItem:hover {
+background-color: rgba(100,100,100,0.5);
+}
+.listItemIcon {
+display: inline-block;
+position: relative;
+width: 24px;
+height: 24px;
+//margin-left: 3.5px;
+//margin-top: 3px;
+left: 50%;
+margin-left: -12px;
+top: 50%;
+margin-top: -12px;
+}
+.listItemBackground {
+height: 100%;
+width: 32px;
+margin-left: 16px;
+margin-right: 8px;
+//position: absolute;
+display: inline-block;
+}
+.listItemText {
+position: absolute;
+top: 50%;
+margin-top: -8.5px;
+display: inline-block;
+}
+.listHeader {
+position: absolute;
+left: 16.5px;
+bottom: 6px;
+}
+
+.startToolbarSquare {
+//border:1px solid white;
+width: 48px;
+height: 48px;
+//float:left;
+display: flex;
+align-items: center;
+}
+.startToolbarSquare:hover {
+background-color: rgba(100,100,100,0.5);
+}
+.startToolbarSquare:not(:hover) {
+transition: 0.1s;
+}
+.startToolbarIcon {
+width: 19px;
+height: 19px;
+//top: 50%;
+//margin-top:-9.5px;
+right: 50%;
+margin-right:-9.5px;
+position:absolute;
+//float: left;
+//margin: auto;
+}
+
+
+#apps {
+//float: left;
+}
+#startToolbar {
+//position: absolute;
+float:left;
+display: flex;
+flex-direction: column;
+//align-items: flex-end;
+justify-content: flex-end;
+height: 100%;
+padding: 0px;
+width: 48px;
+z-index: 50;
+}
+
+.clickOverlay {
+position: fixed;
+width: 100%;
+height: 100%;
+display: none;
+}
+
+#powerMenu {
+z-index: 100;
+left: 2px;
+border: 1px solid rgba(255,255,255, 0.3);
+position: absolute;
+bottom: 96px;
+width: 256px;
+height: 0px;
+background: #2b2b2b;
+transition: 0.2s;
+opacity: 0;
+overflow: hidden;
+color: white;
+padding-top: 7px;
+}
+.powerMenuItem {
+font-size: 12px;
+cursor: default;
+padding-top: 7px;
+padding-bottom: 6px;
+padding-left: 10px;
+font-weight: 345;
+color: white;
+text-shadow: -1px 0 1px rgba(255,255,255,0.6);
+}
+
+.startFolderIcon {
+vertical-align: middle;
+display: inline-block;
+width: 26px;
+height: 26px;
+margin-left: 5px;
+margin-top: 3.5px;
+}
+
+#startToolbarExpanded {
+position: absolute;
+//float: left;
+background: rgba(33,33,33,1);
+top: 0px;
+//width: 210px;
+height: 100%;
+z-index: 98;
+transition: 0.2s;
+overflow: hidden;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+left: 48px;
+}
+.toolbarExpandedText {
+height: 48px;
+padding-top: 12px;
+cursor: default;
+}
+.toolbarExpandedText:hover {
+//background-color: rgba(100,100,100,0.5);
+}
+.toolbarExpandedText:not(:hover) {
+//transition: 0.1s;
+}
+
+.folderDropdown {
+width: 9px;
+height: 9px;
+position: absolute;
+display: inline-block;
+top: 50%;
+margin-top: -5px;
+right: 10px;
+background: url('dropdown_arrow_down.png') no-repeat;
+background-size: contain;
+}
+
+.expandedToolbarHover {
+position: absolute;
+width: 258px;
+height: 48px;
+z-index: -1;
+}
+.expandedToolbarHover:hover {
+background-color: rgba(100,100,100,0.5);
+}
+</style>
+
+<body>
+
+<div id="startMenu" class="vip menu">
+	<div class="vip content" style="white-space:nowrap;width:100%;height:100%;">
+		<div id="startToolbar" class="vip col" style="z-index:98;">
+			<div id="hamburgerIcon" class="vip startToolbarSquare" onclick="expandStartToolbar()" style="position:absolute;top:0px;">
+				<span class="vip startToolbarIcon" style="background: url('hamburger_icon.png') no-repeat;background-size:contain;"></span>
+			</div>
+			<div id="profileIcon" class="vip startToolbarSquare" onclick="profile()" style="">
+				<span class="vip startToolbarIcon" style="background: url('profile.png') no-repeat; background-size:contain;border-radius:20px;"></span>
+			</div>
+			<div id="settingsIcon" class="vip startToolbarSquare" onclick="settings()" style="">
+				<span class="vip startToolbarIcon" style="background: url('settings_white.png') no-repeat; background-size:contain;"></span>
+			</div>
+			<div id="powerIcon" class="vip startToolbarSquare" onclick="powerBtn()" style="">
+				<span class="vip startToolbarIcon" style="background:url('powerIcon.png') no-repeat; background-size:contain;"></span>
+			</div>
+		</div>
+
+		<div id="startToolbarExpanded" class="vip" style="width:0px;">
+			<div id="toolbarStart" class="toolbarExpandedText vip" style="position:absolute;top:0px;width:100%;">START</div>
+			<div id="toolbarName" class="toolbarExpandedText vip">Cheng En LAU</div>
+			<div id="toolbarSettings" class="toolbarExpandedText vip">Settings</div>
+			<div id="toolbarPower" class="toolbarExpandedText vip">Power</div>
+		</div>
+		<div class="expandedToolbarHover"></div>		
+
+		<div id="apps" style="">
+			<div id="recAdded" class="vip" style="width:45%;display:table-cell;">				
+				<div id="scrollBox" class="vip">
+					<div class="listItem vip">
+						<div class="listHeader vip">Suggested</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:black;">
+								<i class="listItemIcon" style="background: url('netflix.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span style="position:absolute;top:50%;margin-top:-17px;display:inline-block;">Netflix<br>Click to install</span>
+							<span style="position:absolute;top:2px;right:8px;display:inline-block;">Free</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">#</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">7-Zip</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">A</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background:rgba(174, 77,80, 1);">
+								<i class="listItemIcon" style="background: url('msAccess.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Access</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('imageIcon.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Acrobat Reader DC</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">C</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('calculator.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Calculator</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('camera.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Camera</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Chrome Apps</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Cisco</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Cisco Meeting</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Conexant</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(7,125,180,1);">
+								<i class="listItemIcon" style="background: url('connect.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Connect</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">D</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Dolby</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">E</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#39825a;">
+								<i class="listItemIcon" style="background: url('msExcel.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Excel</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">E</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('getHelp.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Get Help</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(220,60,0,1);">
+								<i class="listItemIcon" style="background: url('msOffice.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Get Office</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div onclick="googleChrome()">
+							<span class="listitemBackground" style="background-color:#606368;">
+								<i class="listItemIcon" style="background: url('chromeIcon.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Google Chrome</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">I</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Intel</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">L</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">lenovo</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">M</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Microsoft Corporation</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div>
+							<span class="listitemBackground" style="background-color:rgba(0,120,215,1);">
+								<i class="listItemIcon" style="background: url('microsoftEdge.jpg') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Microsoft Edge</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Microsoft Office 2013</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Microsoft Office Tools</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Microsoft System Center</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('mixedRealityPortal.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Mixed Reality Portal</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('mouseProperties.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Mouse Properties(Touchpad Click...</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">N</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('NACAgent.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">NACAgentToastNotification</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">O</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(0,120,215,1);">
+								<i class="listItemIcon" style="background: url('oneDrive.jpg') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">OneDrive</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(119,25,170,1);">
+								<i class="listItemIcon" style="background: url('oneNote.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">OneNote</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(142,79,137,1);">
+								<i class="listItemIcon" style="background: url('oneNote2016.ico') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">OneNote 2016</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(0,122,204,1);">
+								<i class="listItemIcon" style="background: url('outlook.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Outlook</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">P</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('paidWiFi.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Paid Wi-Fi & Cellular</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('paint3D.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Paint 3D</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('photos.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Photos</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#dc6141;">
+								<i class="listItemIcon" style="background: url('msPP.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Powerpoint</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:rgba(34,132,121,1);">
+								<i class="listItemIcon" style="background: url('msPublisher.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Publisher</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">S</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('searchIcon.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Search</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('selfServiceTools.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Self Service Tools</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('settings.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Settings</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('skype.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Skype for Business</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('stickyNotes.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Sticky Notes</span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('windowsStore.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Store</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Symantec Endpoint Protection</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">V</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('voiceRecorder.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Voice Recorder</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="listHeader vip">W</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('wacomPen.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Wacom Pen</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Windows Administrative Tools</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Windows Accessories</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#298fcc;">
+								<i class="listItemIcon" style="background: url('windowsDefender.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Windows Defender Security Center</span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Windows Ease of Access</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Windows System</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem vip">
+						<div class="vip">
+							<span class="listitemBackground vip" style="background-color:#298fcc;">
+								<i class="startFolderIcon vip" style="background: url('folder_open.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText vip">Windows Accessories</span>
+							<span class="folderDropdown vip"></span>
+						</div>
+					</div>
+					<div class="listItem">
+						<div class="">
+							<span class="listitemBackground" style="background-color:#4269a5;">
+								<i class="listItemIcon" style="background: url('msWord.png') no-repeat;background-size:contain;"></i>
+							</span>
+							<span class="listItemText">Word</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="startApps" class="vip" style="overflow:hidden;padding-left:4px;width:55%;display:table-cell;">
+				<div class="vip headerMenuRight">
+					<span class="vip" style="display:inline-block;vertical-align:middle;margin-right:5px;background:url('lockIcon.png') no-repeat;background-size:contain;width:20px;height:20px;"></span>
+					<span class="vip" style="vertical-align:middle;display:inline-block">DBS: Live more, Bank less</span>
+				</div>
+				<div onclick="thisPC()" style="background-color:#298fcc;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('thisPC.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">This PC</p>
+				</div>
+				<div onclick="controlPanel()" style="background-color:#298fcc;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('controlPanel.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">Control Panel</p>
+				</div>
+				<div onclick="snippingTool()" style="background-color:#298fcc;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('snippingTool.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">Snipping Tool</p>
+				</div>
+				<div onclick="googleChrome()" style="background-color:#606368;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('chromeIcon.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">Google Chrome</p>
+				</div>
+				<div onclick="settings()" style="background-color:#298fcc;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('settings.png') no-repeat center;background-size:contain;"></i>
+				</div>
+				<div onclick="msWord()" style="background-color:#4269a5;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('msWord.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">Word</p>
+				</div>
+				<div onclick="skype()" style="background-color:#298fcc;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('skype.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText" style="line-height:15px;">Skype for<br>Business</p>
+				</div>
+				<div onclick="msExcel()" style="background-color:#39825a;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('msExcel.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">Excel</p>
+				</div>
+				<div onclick="msPP()" style="background-color:#dc6141;margin-right:3px;" class="squareCard">
+					<i class="cardIcon" style="background:url('msPP.png') no-repeat center;background-size:contain;"></i>
+					<p class="menuText">PowerPoint</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="powerMenuOverlay" class="clickOverlay vip" style="z-index:99" onclick="closePowerMenu()">
+</div>
+<div id="toolbarExpandedOverlay" class="clickOverlay vip" style="z-index:97" onclick="closeStartToolbar()">
+</div>
+<div id="powerMenu" class="vip">
+<div class="powerMenuItem" onclick="sleep()">Sleep</div>
+<div class="powerMenuItem" onclick="shutDown()">Shut down</div>
+<div class="powerMenuItem" onclick="restart()">Restart</div>
+</div>
+
+<div id="sleepOverlay" style="position:fixed;width:100%;height:100%;background:black;z-index:999;display:none;cursor:none;" onclick="unSleep()">
+<input id="overlayInput" type="text" style="width:0px;height:0px;cursor:none;opacity:0;" onkeypress="unSleep()">
+</div>
+
+<div id="taskbar" class="vip">
+	<div id="startBtn" class="vip taskbarItem" onclick="openMenu()">
+		<span id="startBtnIcon" class="vip icon" style="background:url('start_menu.jpg') no-repeat;background-size:contain;"></span>
+	</div>
+	<div class="taskbarItem">
+		<span class="icon" style="background:url('msPaint.png') no-repeat;background-size:contain;"></span>
+	</div>
+	<div class="taskbarItem">
+		<span class="icon" style="background:url('outlook.png') no-repeat;background-size:contain;"></span>
+	</div>
+	<div class="taskbarItem" onclick="googleChrome()">
+		<span class="icon" style="background:url('chromeIcon.png') no-repeat;background-size:contain;"></span>
+	</div>
+	<div class="taskbarItem">
+		<span class="icon" style="background:url('msTeams.png') no-repeat;background-size:contain;"></span>
+	</div>
+</div>
+
+<script>
+function openMenu() {
+if (document.getElementById("startMenu").style.height != "81.5%") {
+	document.getElementById("scrollBox").scrollTop = 0;
+	document.getElementById("startMenu").style.height = "81.5%";
+	document.getElementById("startMenu").style.opacity = "1";
+}
+else {
+	document.getElementById("startMenu").style.height = "0px";
+	document.getElementById("startMenu").style.opacity = "0";
+}
+}
+
+function expandStartToolbar() {
+if (document.getElementById("startToolbarExpanded").style.width == "0px") {
+	document.getElementById("toolbarExpandedOverlay").style.display = "block";
+	document.getElementById("startToolbarExpanded").style.width = "210px";
+	document.getElementById("startToolbar").style.background = "rgba(33,33,33,1)";
+}
+else {
+closeStartToolbar();
+}
+}
+function closeStartToolbar() {
+document.getElementById("toolbarExpandedOverlay").style.display = "none";
+document.getElementById("startToolbarExpanded").style.width = "0px";
+document.getElementById("startToolbar").style.background = "rgba(31,31,31,0.85)";
+}
+
+function powerBtn() {
+document.getElementById("powerMenuOverlay").style.display = "block";
+document.getElementById("powerMenu").style.height = "110px";
+document.getElementById("powerMenu").style.opacity = "1";
+}
+
+function closePowerMenu() {
+document.getElementById("powerMenuOverlay").style.display = "none";
+document.getElementById("powerMenu").style.height = "0px";
+document.getElementById("powerMenu").style.opacity = "0";
+}
+
+
+window.onload = function() {
+document.onclick = function(e) {
+	if(!e.target.classList.contains('vip')) {
+		document.getElementById("startMenu").style.height = "0px";
+	}
+}
+}
+
+function sleep() {
+closePowerMenu();
+document.getElementById("sleepOverlay").style.display = "block";
+document.getElementById("overlayInput").focus();
+}
+function unSleep() {
+document.getElementById("sleepOverlay").style.display = "none";
+
+}
+
+function shutDown() {
+window.close();
+}
+
+function restart() {
+location.reload();
+}
+
+function googleChrome() {
+window.open('https://www.google.com');
+}
+
+</script>
+</body>
+</html>
